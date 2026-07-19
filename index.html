@@ -6,39 +6,48 @@
     <title>Afnes Taha</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="img/photo_2026-07-04_08-07-34.jpg">
     <link rel="stylesheet" href="style.css">
     <script src="asset/main.js"></script>
 </head>
-<body>
-    <!-- Hero Page -->
-         <nav class="flex justify-between items-center px-12  text-white m-4 rounded-lg fixed w-full z-10 bg-opacity-80 bg-black">
-        <div  class="logo">
-            <h1 class="text-2xl font-bold">Afnes Taha</h1>
-        </div>  
-        <ul class="flex flex-row   items-center text-l text-white gap-10  ">
-            <li class="hover:text-blue-500 text-xl font-bold"><a href="#home">Home</a></li>
-              <li class="hover:text-blue-500 text-xl font-bold"><a href="#Projects">Projects</a></li>
-            <li class="hover:text-blue-500 text-xl font-bold"><a href="#about">About</a></li>
-            <li class="hover:text-blue-500 text-xl font-bold"><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="home" style="background-image:linear-gradient(rgba(0,0,0,0.8)), url(img/pexels-myburgh-1102797.jpg);" class="flex flex-col md:flex-row items-center justify-between p-8 w-screen h-screen bg-cover ">
-        <div class="text-center md:text-left md:w-1/2 m-4 reveal left">
-            <h3 class="text-5xl font-bold text-white my-9">Welcome to My Portfolio</h3>
-            <h1 class="my-4 text-6xl font-extrabold bg-linear-to-br from-sky-400 to-violet-600 bg-clip-text text-transparent">Afnes Taha</h1>
-            <h1 class="my-4 text-6xl font-semiboldt text-white">Full Stack <span class="text-sky-500">Developer</span></h1>
-           
-            <h4 class="text-xl text-white m-3">I help businesses establish a strong online presence through professional web development services. I build websites that are fast, reliable, and tailored to meet your specific goals.</h4>
-               <button class=" bg-blue-500 shadow-lg shadow-blue-500/50 text-white font-bold px-4 py-2 rounded mt-4 hover:bg-blue-600 transition-colors duration-300 w-40 mt-10 ml-55"><a href="#contact">Contact Me</a></button>
+<body class="antialiased">
 
+    <nav class="flex justify-between items-center px-6 md:px-12 py-4 w-full fixed z-50 top-0 shadow-lg">
+        <div class="logo">
+            <h1 class="text-2xl font-extrabold tracking-wider"><a href="#home">Afnes<span class="text-sky-500">Taha</span></a></h1>
+        </div>  
+        <ul id="menu" class="flex flex-col md:flex-row items-center gap-6 md:gap-10 text-lg font-medium transition-all duration-300">
+            <li><a href="#home" class="hover:text-sky-400 transition-colors">Home</a></li>
+            <li><a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a></li>
+            <li><a href="#about" class="hover:text-sky-400 transition-colors">About</a></li>
+            <li><a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a></li>
+        </ul>
+ <button id="menubtn" type="button" class="md:hidden text-white text-2xl focus:outline-none p-2" aria-controls="menu" aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
+</button>
+    </nav>
+
+    <!-- Note: Changed (rgba(0,0,0,0.8)) to (rgba(0,0,0,0.8), rgba(0,0,0,0.8)) to fix invalid CSS syntax while keeping the image exactly as requested -->
+    <section id="home" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('img/pexels-myburgh-1102797.jpg');" class="flex flex-col md:flex-row items-center justify-center md:justify-between p-8 pt-28 md:pt-8 w-full min-h-screen bg-cover bg-center">
+        <div class="text-center md:text-left md:w-1/2 w-full m-4 reveal left md:pl-20">
+            <h3 class="text-4xl md:text-6xl font-bold text-white my-4 md:my-9">Welcome to My Portfolio</h3>
+            <h1 class="my-4 text-5xl md:text-7xl font-extrabold bg-gradient-to-br from-sky-400 to-violet-600 bg-clip-text text-transparent">Afnes Taha</h1>
+            <h1 class="my-4 text-4xl md:text-7xl font-semibold text-white">Full Stack <span class="text-sky-500">Developer</span></h1>
+           
+            <h4 class="text-lg md:text-xl text-gray-300 m-3 max-w-2xl mx-auto md:mx-0">I help businesses establish a strong online presence through professional web development services. I build websites that are fast, reliable, and tailored to meet your specific goals.</h4>
+            
+            <div class="flex justify-center md:justify-start">
+                <a href="#contact" class="bg-blue-600 shadow-lg shadow-blue-500/50 text-white font-bold px-8 py-4 rounded-lg mt-8 hover:bg-blue-500 transition-all duration-300 transform hover:scale-105 inline-block">Contact Me</a>
+            </div>
         </div>
-        <div class="md:w-1/2 flex justify-center  md:mt-0 hover:scale-105 transition-transform duration-300 reveal right">
-            <img src="img/photo_2026-07-04_08-07-34.jpg" alt="Afnes Taha" class="rounded-full w-64 h-64 md:w-96 md:h-96 object-cover cursor-pointer">
+        
+        <div class="md:w-1/2 w-full flex justify-center mt-12 md:mt-0 hover:scale-105 transition-transform duration-300 reveal right">
+            <img src="img/photo_2026-07-04_08-07-34.jpg" onerror="this.src='https://placehold.co/400x400/111827/06b6d4?text=Afnes+Taha'" alt="Afnes Taha" class="rounded-full w-56 h-56 md:w-96 md:h-96 object-cover cursor-pointer border-4 border-gray-800 shadow-[0_0_30px_rgba(6,182,212,0.3)]">
         </div>
     </section>
     <!-- Projects -->
     <section id="Projects">
-        <h1 class="text-5xl font-bold text-white flex justify-center     text-center gap-4 m-11">My Projects</h1>
+        <h1 class="text-7xl font-bold text-white flex justify-center     text-center gap-4 m-11">My Projects</h1>
         <p class="text-white text-lg text-center m-8">Here are some of the projects I've worked on.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 m-4">
        <video autoplay muted loop playsinline class="rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
@@ -56,88 +65,136 @@
 </div>
     </section>
     <!-- About -->
-    <section id="about" class="text-white gap-30 m-4 reveal " >
+  <section id="about" class="py-20 px-4 reveal">
+        <h2 class="text-5xl md:text-7xl font-bold text-white text-center mb-4">About Me</h2>
+        <p class="text-gray-400 text-center mb-16 text-lg">My professional and academic journey as a web developer and student.</p>
         
-        <h2 class="text-5xl font-bold text-white text-center m-4">About Me</h2>
-        <p class="text-white text-center m-8 text-lg mb-15">Learn more about my background and experience.</p>
-        <div class=" font-bold m-4 w-sm h-xs border-l-4 border-2 border-indigo-500 border-solid rounded-lg p-4 bg-gray-900 shadow-lg shadow-indigo-500/50  relative left-70 py-10 mb-25 cursor-pointer hover:scale-105 transition-transform duration-300">
-            <h2 class="font-extrabold bg-linear-to-br from-sky-400 to-violet-600 bg-clip-text text-transparent text-2xl" >CEO & Web Developer</h2>
-            <p class="text-white text-sm"> T/A Company — Jijel, Algeria
-<ol class="text-white text-sm">
-    <li >Founded and directed a full-service digital agency</li>
-    <li>Developed custom web applications for corporate and retail clients</li>
-    <li>Managed projects, client relations, and growth strategies for the agency</li>
-</ol>
-</p>
-        </div> 
-        <div class=" font-bold m-4 w-sm h-xs border-l-4 border-2 border-indigo-500 border-solid rounded-lg p-4 bg-gray-900 shadow-lg shadow-indigo-500/50  relative left-200 py-10 mb-25 cursor-pointer hover:scale-105 transition-transform duration-300"> <h2 class="font-extrabold bg-linear-to-br from-sky-400 to-violet-600 bg-clip-text text-transparent text-2xl">Web Developer Intern</h2>
-        <p class="font-extrabold bg-linear-to-br from-sky-400 to-violet-600 bg-clip-text text-transparent text-2xl"> <span class="text-lg"> Softwear —Jijel, Algeria</span>
-           <ol class="text-white text-sm">
-    <li>Assisted in the development of web applications and websites</li>
-    <li>Collaborated with senior developers to learn best practices and coding standards</li>
-    <li>Gained hands-on experience in front-end and back-end development</li>
-</ol>
-      </p>
-        </div>
-        <div class=" font-bold m-4 w-sm h-xs border-l-4 border-2 border-indigo-500 border-solid rounded-lg p-4 bg-gray-900 shadow-lg shadow-indigo-500/50  relative left-70 py-10 mb-25 cursor-pointer hover:scale-105 transition-transform duration-300"> 
-            <h2 class="font-extrabold bg-linear-to-br from-sky-400 to-violet-600 bg-clip-text text-transparent text-2xl">Freelance Full Stack Developer</h2>
-        <p class="text-white text-sm">
-       Developed and maintained scalable web applications using the MERN stack
-        Contributed to various client projects as a freelance developer</p>
-        </div>
+        <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item left reveal">
+                <div class="timeline-card">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="badge">Experience</span>
+                        <span class="text-gray-400 text-sm font-medium">Dec. 2025 - Present</span>
+                    </div>
+                    <h3 class="font-bold text-2xl text-white mb-1">CEO &amp; Web Developer</h3>
+                    <p class="text-sky-400 font-semibold text-base mb-4">Ambyte Agency — Constantine, Algeria</p>
+                    <ul class="list-disc list-inside text-gray-400 text-sm md:text-base space-y-2">
+                        <li>Founded and directed a full-service digital agency</li>
+                        <li>Developed custom web applications for corporate and retail clients</li>
+                        <li>Managed projects, client relations, and growth strategies for the agency</li>
+                    </ul>
+                </div>
+            </div>
 
-    </section>
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item right reveal">
+                <div class="timeline-card">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="badge">Experience</span>
+                        <span class="text-gray-400 text-sm font-medium">Oct. 2025 - Jan. 2026</span>
+                    </div>
+                    <h3 class="font-bold text-2xl text-white mb-1">Web Developer Intern</h3>
+                    <p class="text-sky-400 font-semibold text-base mb-4">Cirta Soft — Constantine, Algeria</p>
+                    <ul class="list-disc list-inside text-gray-400 text-sm md:text-base space-y-2">
+                        <li>Developed a web platform in a professional development environment</li>
+                    </ul>
+                </div>
+            </div>
 
-    <!-- Contact -->
-    <section id="contact" class="text-white gap-30 m-4 reveal">
-        <h2 class="text-5xl font-bold text-white text-center m-4 ">Contact Me</h2>
-        <p class="text-white text-center m-8 text-lg mb-15" >Get in touch with me for any inquiries or opportunities.</p>
-       <div class="flex flex-col md:flex-row items-center justify-between gap-8 m-4">
-        <div class="w-xl h-xs border-l-4 border-2 border-blue-950 border-solid rounded-lg p-4 bg-gray-1100    py-10 mb-25 cursor-pointer  flex flex-col gap-4"> 
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required class="rounded-lg h-13 p-2 bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">  
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required class="rounded-lg p-2 h-13 bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-           <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Enter your message...." required class="rounded-lg p-2 h-32 bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-            <button type="submit" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded shadow-lg shadow-indigo-500/50">Send</button>
-        </div>
-        <div class="w-xl h-xs   py-10 mb-25  flex flex-col gap-4">
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item left reveal">
+                <div class="timeline-card">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="badge">Experience</span>
+                        <span class="text-gray-400 text-sm font-medium">Dec. 2024 - Aug. 2025</span>
+                    </div>
+                    <h3 class="font-bold text-2xl text-white mb-1">Freelance Full Stack Developer</h3>
+                    <p class="text-sky-400 font-semibold text-base mb-4">Adwave Agency — Algiers, Algeria (Remote)</p>
+                    <ul class="list-disc list-inside text-gray-400 text-sm md:text-base space-y-2">
+                        <li>Developed and maintained scalable web applications using the MERN stack</li>
+                        <li>Contributed to various client projects as a freelance developer</li>
+                    </ul>
+                </div>
+            </div>
+
            
-            <div class="flex flex-col gap-2 w-md h-3xs border-l-4 border-2 border-blue-950 border-solid rounded-lg p-4 bg-gray-1100   relative  py-10  cursor-pointer ">
-               <div class="flex flex-row items-center gap-4 ">
-                <div class="text-white text-lg size-12 m-2 border border-gray-700 rounded-lg p-2"><i class="fas fa-envelope text-2xl text-sky-500 justify-center align-center p-1  "></i></div>
-               <div class="text-white text-lg">
-                <h3 class="text-xl font-bold text-gray-500 text-xs">Email Address</h3>
-                <h4 class="text-xl font-bold hover:text-sky-500  ">afnesuniv.email@example.com</h4></div>
-                </div>
-            </div>
-             
-            
-            <div class="flex flex-col gap-2 w-md h-3xs border-l-4 border-2 border-blue-950 border-solid rounded-lg p-4 bg-gray-1100   relative  py-10  cursor-pointer ">
-               <div class="flex flex-row items-center gap-4 ">
-                <div class="text-white text-lg size-12 m-2 border border-gray-700 rounded-lg px-3 py-2"><i class="fas fa-phone size-10 text-sky-500 justify-center  "></i></div>
-               <div class="text-white text-lg">
-                <h3 class="text-xl font-bold text-gray-500 text-xs ">Phone Number</h3>
-                <h4 class="text-xl font-bold hover:text-sky-500  ">+213666630179</h4></div>
-            </div>
-            </div>
-            <div class="flex flex-col gap-2 w-md h-3xs border-l-4 border-2 border-blue-950 border-solid rounded-lg p-4 bg-gray-1100   relative  py-10  cursor-pointer ">
-         
-                <h3 class="text-xl font-bold text-gray-500 text-md">Social Media</h3>
-                <div class="flex flex-row justify-between mt-2 px-15">
-                    <a href="https://www.linkedin.com/in/afnes-taha-1ba1b1234/" target="_blank"><i class="fab fa-linkedin text-3xl hover:text-sky-500"></i></a>
-                    <a href="https://github.com/afnestaha" target="_blank"><i class="fab fa-github text-3xl hover:text-gray-500"></i></a>
-                    <a href="https://www.instagram.com/afnes_taha/" target="_blank"><i class="fab fa-instagram text-3xl hover:text-pink-500"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=+213666630179" target="_blank" class="fixed right-4 bottom-8 flex size-16 items-center justify-center rounded-full bg-green-500 text-3xl text-white shadow-lg transition-transform hover:scale-110 "  ><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.facebook.com/afnes.taha.1" target="_blank"><i class="fab fa-facebook text-3xl hover:text-blue-500"></i></a>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
-    <footer class="bg-opacity-80 bg-black text-white py-4 text-center font-bold h-16 flex items-center justify-center">
-        <p>&copy; 2026 Afnes Taha. All rights reserved.</p>
-    </footer>   
+    <section id="contact" class="py-20 px-6 md:px-12 max-w-6xl mx-auto reveal mb-20">
+        <div class="text-center mb-12">
+            <span class="text-sky-500 font-bold tracking-widest uppercase text-sm mb-2 block">Get in touch</span>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Contact <span class="text-sky-500">Me</span></h2>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">Have an exciting project in mind or want to collaborate? Reach out and let's build something amazing together.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Left Column: Contact Info Cards -->
+            <div class="flex flex-col gap-6">
+                <!-- Email Card -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-6 flex items-center gap-6 hover:border-sky-500/50 transition-colors">
+                    <div class="bg-gray-800 p-4 rounded-xl text-violet-500 text-2xl flex-shrink-0">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="overflow-hidden">
+                        <h3 class="text-sm text-gray-400 font-bold uppercase tracking-wider mb-1">Email Address</h3>
+                        <a href="mailto:afnesuniv@gmail.com" class="text-white text-lg md:text-xl font-bold hover:text-sky-400 truncate block">afnesuniv@gmail.com</a>
+                    </div>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-6 flex items-center gap-6 hover:border-sky-500/50 transition-colors">
+                    <div class="bg-gray-800 p-4 rounded-xl text-sky-500 text-2xl flex-shrink-0">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm text-gray-400 font-bold uppercase tracking-wider mb-1">Phone Number</h3>
+                        <a href="tel:+213666630179" class="text-white text-lg md:text-xl font-bold hover:text-sky-400">+213 666 63 01 79</a>
+                    </div>
+                </div>
+
+                <!-- Social Handles -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-6 hover:border-sky-500/50 transition-colors">
+                    <h3 class="text-sm text-gray-400 font-bold uppercase tracking-wider mb-4">Social Handles</h3>
+                    <div class="flex gap-4 justify-center gap-6 md:gap-10">
+                        <a href="https://www.facebook.com/share/1H9ucVTVYr/" target="_blank" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-xl text-white hover:bg-blue-500 transition-colors"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/afnes-taha-1ba1b1234/" target="_blank" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-xl text-white hover:bg-sky-600 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/afnestaha" target="_blank" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-xl text-white hover:bg-gray-600 transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/affstaha2?igsh=MXd4bWw5bGwzZG1s" target="_blank" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-xl text-white hover:bg-pink-600 transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Contact Form -->
+            <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-8 shadow-xl">
+                <form action="mailto:afnesuniv@gmail.com" method="POST" enctype="text/plain" class="flex flex-col gap-5">
+                    <input type="hidden" name="subject" value="Portfolio contact form message">
+                    <div>
+                        <label for="name" class="block text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required class="w-full bg-gray-800 text-white rounded-lg p-4 border border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required class="w-full bg-gray-800 text-white rounded-lg p-4 border border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">Your Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Write your project details or inquiries here..." required class="w-full bg-gray-800 text-white rounded-lg p-4 border border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full mt-2 bg-gradient-to-r from-violet-600 to-sky-500 hover:from-violet-500 hover:to-sky-400 text-white font-bold py-4 px-6 rounded-lg shadow-lg transition-all transform hover:-translate-y-1">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <a href="https://api.whatsapp.com/send?phone=+213666630179" 
+   target="_blank" 
+   class="fixed right-7 bottom-18 z-50 flex size-16 items-center justify-center rounded-full bg-green-500 text-3xl text-white shadow-lg transition-transform hover:scale-110 z-50">
+   <i class="fab fa-whatsapp"></i>
+</a> 
+    <footer class="bg-[#01031f] border-t border-gray-800 text-gray-400 py-6 text-center font-medium">        <p>&copy; 2026 Afnes Taha. All rights reserved.</p>
+    </footer> 
+      
 </body>
 </html>
