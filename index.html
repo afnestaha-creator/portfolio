@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afnes Taha — Full Stack Developer</title>
+    <meta name="description" content="Afnes Taha is a full-stack developer in Jijel, Algeria, building MERN-stack web applications and websites for businesses.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="img/photo_2026-07-04_08-07-34.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo"><a href="#home">Afnes<span>Taha</span></a></div>
+
+        <div class="nav-actions">
+            <div class="lang-switcher" aria-label="Language switcher">
+                <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                <span class="lang-separator">|</span>
+                <button type="button" class="lang-btn" data-lang="ar">AR</button>
+            </div>
+
+            <ul id="menu">
+                <li><a href="#home" class="active" data-i18n="nav.home">Home</a></li>
+                <li><a href="#work" data-i18n="nav.work">Work</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <button id="menubtn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section id="home">
+        <div class="container hero-grid">
+            <div class="reveal">
+                <div class="hero-status"><span class="pulse-dot"></span><span data-i18n="hero.status">Available for freelance work</span></div>
+
+                <h1 class="hero-title">
+                    <span data-i18n="hero.titleLine1">Full-stack development</span>
+                    <span class="accent-line" data-i18n="hero.titleLine2">that ships and holds up.</span>
+                </h1>
+
+                <p class="hero-copy" data-i18n="hero.copy">
+                    I'm Afnes Taha, a full-stack developer based in Jijel, Algeria. I design and build MERN-stack web applications and business websites — from the first wireframe to a production deploy that stays fast and reliable.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Start a project</a>
+                    <a href="#work" class="btn btn-ghost" data-i18n="hero.ctaSecondary">See my work</a>
+                </div>
+
+                <div class="hero-terminal">
+                    <span class="prompt">&gt;</span>
+                    <span class="typed" id="typed-line"></span><span class="cursor">|</span>
+                </div>
+            </div>
+
+            <div class="hero-portrait reveal">
+                <div class="portrait-frame">
+                    <img src="img/photo_2026-07-04_08-07-34.jpg"
+                         onerror="this.src='https://placehold.co/400x400/121a2e/ffb454?text=Afnes+Taha'"
+                         alt="Portrait of Afnes Taha">
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                        <path d="M2,18 L2,2 L18,2" />
+                        <path d="M98,18 L98,2 L82,2" />
+                        <path d="M2,82 L2,98 L18,98" />
+                        <path d="M98,82 L98,98 L82,98" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TECH TICKER ================= -->
+    <div class="ticker-wrap" aria-hidden="true">
+        <div class="ticker-track">
+            <span><i class="fa-brands fa-react"></i>React</span>
+            <span><i class="fa-brands fa-node-js"></i>Node.js</span>
+            <span><i class="fa-solid fa-leaf"></i>MongoDB</span>
+            <span><i class="fa-brands fa-js"></i>JavaScript</span>
+            <span><i class="fa-brands fa-html5"></i>HTML5</span>
+            <span><i class="fa-brands fa-css3-alt"></i>CSS3</span>
+            <span><i class="fa-brands fa-git-alt"></i>Git</span>
+            <span><i class="fa-solid fa-server"></i>Express</span>
+            <!-- duplicated for seamless loop -->
+            <span><i class="fa-brands fa-react"></i>React</span>
+            <span><i class="fa-brands fa-node-js"></i>Node.js</span>
+            <span><i class="fa-solid fa-leaf"></i>MongoDB</span>
+            <span><i class="fa-brands fa-js"></i>JavaScript</span>
+            <span><i class="fa-brands fa-html5"></i>HTML5</span>
+            <span><i class="fa-brands fa-css3-alt"></i>CSS3</span>
+            <span><i class="fa-brands fa-git-alt"></i>Git</span>
+            <span><i class="fa-solid fa-server"></i>Express</span>
+        </div>
+    </div>
+
+    <!-- ================= WORK ================= -->
+    <section id="work" class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="mono-tag" data-i18n="work.tag">// selected-work</span>
+                <h2 data-i18n="work.title">Recent projects</h2>
+                <p data-i18n="work.subtitle">A few of the applications and sites I've built for clients and my own agency, T/A Company.</p>
+            </div>
+
+            <div class="work-grid stagger reveal">
+                <div class="work-card">
+                    <video autoplay muted loop playsinline aria-label="Retail storefront project preview">
+                        <source src="video/Screencast%20from%202026-07-04%2006-43-11.webm" type="video/webm">
+                    </video>
+                    <div class="work-overlay">
+                        <h3 data-i18n="work.project1.title">Retail Storefront</h3>
+                        <p data-i18n="work.project1.copy">Customer-facing e-commerce site with cart and checkout flow.</p>
+                        <div class="work-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <video autoplay muted loop playsinline aria-label="Client dashboard project preview">
+                        <source src="video/Screencast%20from%202026-07-04%2006-46-10.webm" type="video/webm">
+                    </video>
+                    <div class="work-overlay">
+                        <h3 data-i18n="work.project2.title">Client Dashboard</h3>
+                        <p data-i18n="work.project2.copy">Internal admin panel for managing orders and reporting.</p>
+                        <div class="work-tags"><span>React</span><span>Express</span><span>Chart.js</span></div>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <video autoplay muted loop playsinline aria-label="Booking platform project preview">
+                        <source src="video/Screencast%20from%202026-07-04%2006-53-14.webm" type="video/webm">
+                    </video>
+                    <div class="work-overlay">
+                        <h3 data-i18n="work.project3.title">Booking Platform</h3>
+                        <p data-i18n="work.project3.copy">Reservation system with real-time availability.</p>
+                        <div class="work-tags"><span>MERN</span><span>REST API</span></div>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <video autoplay muted loop playsinline aria-label="Corporate website project preview">
+                        <source src="video/Screencast%20from%202026-07-04%2007-42-57.webm" type="video/webm">
+                    </video>
+                    <div class="work-overlay">
+                        <h3 data-i18n="work.project4.title">Corporate Website</h3>
+                        <p data-i18n="work.project4.copy">Marketing site with CMS-driven content sections.</p>
+                        <div class="work-tags"><span>JavaScript</span><span>Tailwind</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="mono-tag" data-i18n="about.tag">// experience</span>
+                <h2 data-i18n="about.title">About me</h2>
+                <p data-i18n="about.subtitle">My professional path as a web developer, from internship to running my own agency.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-progress" id="timeline-progress"></div>
+
+                <div class="timeline-item left reveal">
+                    <div class="timeline-card">
+                        <span class="badge" data-i18n="about.badge.current">Current</span>
+                        <span class="timeline-date" data-i18n="about.date1">Dec. 2025 — Present</span>
+                        <h3 data-i18n="about.role1">CEO &amp; Web Developer</h3>
+                        <p class="role-org" data-i18n="about.org1">T/A Company — Jijel, Algeria</p>
+                        <ul>
+                            <li data-i18n="about.point1a">Founded and directed a full-service digital agency</li>
+                            <li data-i18n="about.point1b">Developed custom web applications for corporate and retail clients</li>
+                            <li data-i18n="about.point1c">Managed projects, client relations, and growth strategy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item right reveal">
+                    <div class="timeline-card">
+                        <span class="badge" data-i18n="about.badge.experience">Experience</span>
+                        <span class="timeline-date" data-i18n="about.date2">— Jan. 2026</span>
+                        <h3 data-i18n="about.role2">Web Developer Intern</h3>
+                        <p class="role-org" data-i18n="about.org2">Softwear — Jijel, Algeria</p>
+                        <ul>
+                            <li data-i18n="about.point2">Developed a web platform in a professional development environment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item left reveal">
+                    <div class="timeline-card">
+                        <span class="badge" data-i18n="about.badge.experience">Experience</span>
+                        <span class="timeline-date" data-i18n="about.date3">Freelance</span>
+                        <h3 data-i18n="about.role3">Full Stack Developer</h3>
+                        <p class="role-org" data-i18n="about.org3">T/A Company — Jijel, Algeria</p>
+                        <ul>
+                            <li data-i18n="about.point3a">Developed and maintained scalable web applications using the MERN stack</li>
+                            <li data-i18n="about.point3b">Contributed to various client projects as a freelance developer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-head reveal" style="margin: 0 auto 56px; text-align: center;">
+                <span class="mono-tag" data-i18n="contact.tag">// get-in-touch</span>
+                <h2 data-i18n="contact.title">Let's build something</h2>
+                <p style="margin: 0 auto;" data-i18n="contact.subtitle">Have a project in mind or want to collaborate? Reach out and let's talk through it.</p>
+            </div>
+
+            <div class="contact-grid reveal">
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="contact-label" data-i18n="contact.emailLabel">Email</div>
+                            <a href="mailto:afnesuniv@gmail.com" class="contact-value">afnesuniv@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon teal"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <div class="contact-label" data-i18n="contact.phoneLabel">Phone</div>
+                            <a href="tel:+213666630179" class="contact-value">+213 666 63 01 79</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card" style="flex-direction: column; align-items: flex-start;">
+                        <div class="contact-label" style="margin-bottom: 14px;" data-i18n="contact.socialLabel">Elsewhere</div>
+                        <div class="social-row">
+                            <a href="https://www.facebook.com/share/1H9ucVTVYr/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/in/afnes-taha-1ba1b1234/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/afnestaha" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/affstaha2?igsh=MXd4bWw5bGwzZG1s" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="field">
+                        <label for="name" data-i18n="contact.form.nameLabel">Full name</label>
+                        <input type="text" id="name" name="name" data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Your name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email" data-i18n="contact.form.emailLabel">Email address</label>
+                        <input type="email" id="email" name="email" data-i18n-placeholder="contact.form.emailPlaceholder" placeholder="you@example.com" required>
+                    </div>
+                    <div class="field">
+                        <label for="message" data-i18n="contact.form.messageLabel">Message</label>
+                        <textarea id="message" name="message" rows="5" data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="justify-content: center;" data-i18n="contact.form.submit">Send message</button>
+                    <p class="form-note" id="form-note"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://api.whatsapp.com/send?phone=+213666630179" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Message on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p data-i18n="footer.text">&copy; 2026 Afnes Taha. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
