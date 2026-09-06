@@ -18,7 +18,10 @@ type Project = {
   stack: string[];
   visual: string;
   category: string;
+  media: string;
 };
+
+const mediaUrl = (filename: string) => `${import.meta.env.BASE_URL}media/${filename}`;
 
 const projects: Project[] = [
   {
@@ -30,6 +33,7 @@ const projects: Project[] = [
     stack: ['React', 'TypeScript', 'Node.js'],
     visual: 'visual-one',
     category: 'Frontend',
+    media: 'project-01.webm',
   },
   {
     id: '02',
@@ -40,6 +44,7 @@ const projects: Project[] = [
     stack: ['MERN', 'REST API', 'UX'],
     visual: 'visual-two',
     category: 'Full stack',
+    media: 'project-02.webm',
   },
   {
     id: '03',
@@ -50,6 +55,18 @@ const projects: Project[] = [
     stack: ['Discovery', 'UI direction', 'Deployment'],
     visual: 'visual-three',
     category: 'Freelance',
+    media: 'project-03.webm',
+  },
+  {
+    id: '04',
+    title: 'Interfaces with a pulse.',
+    type: 'Product direction',
+    year: '2026',
+    description: 'A collection of interaction studies exploring how motion, hierarchy, and a clear point of view can make digital products feel more human.',
+    stack: ['Motion', 'Interaction', 'Visual design'],
+    visual: 'visual-four',
+    category: 'Frontend',
+    media: 'project-04.webm',
   },
 ];
 
@@ -132,7 +149,8 @@ function Hero() {
         </div>
         <div className="portrait-wrap" aria-label="Art-directed portrait monogram for Afnes Taha" data-testid="portrait-area">
           <div className="portrait-card">
-            <div className="portrait-geometry"><span className="portrait-initials">AT</span></div>
+            <img className="portrait-photo" src={mediaUrl('afnes-taha-portrait.jpg')} alt="Afnes Taha overlooking the coast of Jijel" data-testid="image-portrait" />
+            <div className="portrait-photo-overlay" />
             <div className="portrait-tag">Jijel, DZ · 36°49′N</div>
           </div>
           <div className="portrait-orbit" />
@@ -174,7 +192,12 @@ function Projects() {
         <div className="project-grid" aria-live="polite">
           {filteredProjects.length > 0 ? filteredProjects.map((project, index) => (
             <article className={`project-card reveal delay-${(index % 3) + 1}`} key={project.id} data-testid={`card-project-${project.id}`}>
-              <div className={`project-visual ${project.visual}`} />
+              <div className={`project-visual ${project.visual}`}>
+                <video className="project-media" autoPlay muted loop playsInline preload="metadata" poster={mediaUrl('afnes-taha-portrait.jpg')} aria-label={`${project.title} project preview`} data-testid={`video-project-${project.id}`}>
+                  <source src={mediaUrl(project.media)} type="video/webm" />
+                </video>
+                <div className="media-shade" />
+              </div>
               <div className="project-content">
                 <div className="project-top"><span className="project-type">{project.type}</span><span className="project-year">{project.year}</span></div>
                 <div>

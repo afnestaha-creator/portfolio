@@ -1,0 +1,1 @@
+- [Artifact registration recovery](artifact-registration.md) — preserve source and recreate registration when an artifact directory outlives its preview entry.

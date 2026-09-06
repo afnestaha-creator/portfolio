@@ -1,7 +1,7 @@
 kind = "web"
 previewPath = "/"
 title = "Afnes Taha — Portfolio"
-description = "A polished personal portfolio for Afnes Taha, a full stack developer from Algeria, with project showcases, experience, skills, and a direct contact experience."
+description = "A polished personal portfolio for Afnes Taha, a full stack developer from Algeria, with real project videos, a personal portrait, project showcases, experience, skills, and contact details."
 version = "1.0.0"
 id = "artifacts/afnes-taha-portfolio"
 router = "path"
