@@ -78,9 +78,9 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ];
 
-function useScrollReveal() {
+function useScrollReveal(dependencies: readonly unknown[] = [], selector = '.reveal') {
   useEffect(() => {
-    const nodes = Array.from(document.querySelectorAll<HTMLElement>('.reveal'));
+    const nodes = Array.from(document.querySelectorAll<HTMLElement>(selector));
     if (!('IntersectionObserver' in window)) {
       nodes.forEach((node) => node.classList.add('in-view'));
       return;
@@ -95,7 +95,7 @@ function useScrollReveal() {
     }, { threshold: 0.14 });
     nodes.forEach((node) => observer.observe(node));
     return () => observer.disconnect();
-  }, []);
+  }, [selector, ...dependencies]);
 }
 
 function Header() {
@@ -175,6 +175,7 @@ function Projects() {
   const [filter, setFilter] = useState('All');
   const filters = ['All', 'Frontend', 'Full stack', 'Freelance'];
   const filteredProjects = useMemo(() => filter === 'All' ? projects : projects.filter((project) => project.category === filter), [filter]);
+  useScrollReveal([filter], '.project-card.reveal');
   return (
     <section id="projects" className="section" data-testid="section-projects">
       <div className="container-wide">
