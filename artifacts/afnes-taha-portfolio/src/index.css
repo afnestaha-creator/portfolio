@@ -110,6 +110,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .button-primary:hover, .button-ghost:hover { transform: translateY(-3px); }
 .button-primary:hover { background: hsl(var(--accent)); border-color: hsl(var(--accent)); }
 .button-ghost:hover { border-color: hsl(var(--primary)); color: hsl(var(--primary)); }
+.button-primary:disabled { cursor: wait; opacity: .65; transform: none; }
 .hero-note { display: flex; gap: 10px; align-items: center; margin-top: 48px; color: hsl(var(--muted-foreground)); font: 11px/1.4 var(--app-font-mono); animation: rise .9s .55s both; }
 .hero-note svg { color: hsl(var(--primary)); }
 
@@ -201,6 +202,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contact-detail { display: flex; align-items: center; gap: 11px; color: hsl(var(--foreground)); font: 11px var(--app-font-mono); }
 .contact-detail svg { color: hsl(var(--primary)); }
 .contact-form { position: relative; z-index: 1; display: grid; gap: 20px; }
+.contact-trap { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
 .field-label { display: grid; gap: 8px; color: hsl(var(--muted-foreground)); font: 10px var(--app-font-mono); letter-spacing: .08em; text-transform: uppercase; }
 .field-input { width: 100%; border: 0; border-bottom: 1px solid hsl(var(--border)); padding: 10px 0; outline: none; background: transparent; color: hsl(var(--foreground)); font-size: 14px; transition: border-color .25s ease; }
 .field-input:focus { border-color: hsl(var(--primary)); }

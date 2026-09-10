@@ -1,2 +1,3 @@
 - [Artifact registration recovery](artifact-registration.md) — preserve source and recreate registration when an artifact directory outlives its preview entry.
 - [Project filter reveal behavior](project-filter-reveal.md) — rerun scroll reveals when filtering replaces rendered cards.
+- [Contact email delivery](contact-email-delivery.md) — send validated form submissions server-side through the managed email connection.

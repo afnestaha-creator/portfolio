@@ -262,16 +262,35 @@ function Skills() {
 
 function Contact() {
   const [feedback, setFeedback] = useState('');
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const [isSending, setIsSending] = useState(false);
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const name = String(data.get('name') ?? '');
     const email = String(data.get('email') ?? '');
     const message = String(data.get('message') ?? '');
-    const subject = `Project inquiry from ${name}`;
-    const body = `Hi Afnes,%0D%0A%0D%0A${encodeURIComponent(message)}%0D%0A%0D%0AReply to: ${encodeURIComponent(email)}`;
-    setFeedback('Opening your email client — see you in the thread.');
-    window.location.href = `mailto:afnesuniv@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    setIsSending(true);
+    setFeedback('Sending your note…');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message }),
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Your note could not be sent right now.');
+      }
+
+      event.currentTarget.reset();
+      setFeedback('Your note is on its way — I’ll get back to you soon.');
+    } catch (error) {
+      setFeedback(error instanceof Error ? error.message : 'Your note could not be sent right now. Please try again.');
+    } finally {
+      setIsSending(false);
+    }
   };
   return (
     <section id="contact" className="section contact-section" data-testid="section-contact">
@@ -291,7 +310,8 @@ function Contact() {
             <label className="field-label">Your name<input className="field-input" name="name" type="text" placeholder="How should I call you?" required data-testid="input-name" /></label>
             <label className="field-label">Your email<input className="field-input" name="email" type="email" placeholder="you@company.com" required data-testid="input-email" /></label>
             <label className="field-label">The brief<textarea className="field-input" name="message" placeholder="A few words about the thing you want to make..." required data-testid="input-message" /></label>
-            <button className="button-primary form-submit" type="submit" data-testid="button-submit-contact">Send the note <Send size={14} /></button>
+            <input className="contact-trap" name="website" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+            <button className="button-primary form-submit" type="submit" disabled={isSending} data-testid="button-submit-contact">{isSending ? 'Sending…' : 'Send the note'} <Send size={14} /></button>
             <div className="form-feedback" role="status" data-testid="status-contact-form">{feedback}</div>
           </form>
         </div>
